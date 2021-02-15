@@ -1,0 +1,2 @@
+# SimilarityChecker
+ cosine similarity cheker
