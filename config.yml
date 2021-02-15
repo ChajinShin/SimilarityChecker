@@ -1,0 +1,76 @@
+# device
+use_cuda: True
+gpu_idx: '0'
+seed: 17
+
+
+# image
+dataset:
+  # in case of 'visualization' task, directory must be image file
+  # in case of 'numeric' task, directory must be folder
+  query_directory: './1.jpg'
+  key_directory:  './2.jpg'       # if this directory is same with query_folder, it means that we get internal similarity
+  normalize_preprocess: True
+
+  result_directory: './result.jpg'   # for visualization result
+
+
+# task
+task: 'visualization'       # 'numeric' or 'visualization'
+
+
+# network
+which_layer_extract: 32
+
+
+# visualization
+coord_size: 1          # query image의 pixel 하나 선택했을 때, 그 pixel 기준으로 상하좌우 몇 pixel 더 가져와서 similarity 평균 낼 것인지.
+density: 0.45          # heatmap과 이미지를 합성할 때, image의 불투명도
+
+
+
+
+
+
+# VGG 19 layer info
+#  (features): Sequential(
+#    (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+#    (1): ReLU(inplace=True)
+#    (2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+#    (3): ReLU(inplace=True)
+#    (4): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+#    (5): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+#    (6): ReLU(inplace=True)
+#    (7): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+#    (8): ReLU(inplace=True)
+#    (9): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+#    (10): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+#    (11): ReLU(inplace=True)
+#    (12): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+#    (13): ReLU(inplace=True)
+#    (14): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+#    (15): ReLU(inplace=True)
+#    (16): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+#    (17): ReLU(inplace=True)
+#    (18): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+#    (19): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+#    (20): ReLU(inplace=True)
+#    (21): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+#    (22): ReLU(inplace=True)
+#    (23): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+#    (24): ReLU(inplace=True)
+#    (25): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+#    (26): ReLU(inplace=True)
+#    (27): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+#    (28): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+#    (29): ReLU(inplace=True)
+#    (30): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+#    (31): ReLU(inplace=True)
+#    (32): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+#    (33): ReLU(inplace=True)
+#    (34): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+#    (35): ReLU(inplace=True)
+#    (36): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+#  )
+#)
+
