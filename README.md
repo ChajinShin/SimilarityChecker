@@ -40,7 +40,7 @@ We used following components:
 ## How to use 
 Specify *'query_directory'* and *'key_directory'* from config.yaml file. If you use *'visualization'* task,
 then also do *'result_directory'*. In case of 'visualization' task, directory must be image file. 
-In contrast, in case of 'numeric' task, directory must be folder.
+In contrast, in case of 'numeric' task, directory must be folder that contains images.
    
 ```
 dataset:
